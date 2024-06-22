@@ -5,7 +5,7 @@ def is_image_file(image_path = ""):
 	image_extensions = (".png", ".jpeg", ".jpg", ".bmp", ".webp", ".tiff", ".gif", ".rgb", ".pbm", ".pgm", ".ppm", ".rast", ".xbm", ".exr")
 	return path.isfile(image_path) and image_path.lower().endswith(image_extensions)
 
-def load_image(image_path = "", image_size = (2209, 3124)):
+def load_image(image_path = "", image_size = (2378, 3363)):
 	try:
 		if is_image_file(image_path):
 			return Image.open(image_path).convert("RGB").resize(image_size, Image.Resampling.LANCZOS)
@@ -14,7 +14,7 @@ def load_image(image_path = "", image_size = (2209, 3124)):
 	except:
 		print("Error When Open Image:", image_path, KeyError, NameError)
 
-def save_images_to_pdf(images_dir = "", image_size = (2209, 3124), pdf_path = ""):
+def save_images_to_pdf(images_dir = "", image_size = (2378, 3363), pdf_path = ""):
 	try:
 		images = []
 		image_names = listdir(images_dir)

@@ -9,7 +9,7 @@ if __name__ == "__main__":
 		if not path.isdir(pdf_comics_dir):
 			makedirs(pdf_comics_dir)
 
-		image_size = (2209, 3124)
+		image_size = (2378, 3363)
 
 		for comic_name in listdir(comics_dir):
 			comic_dir = path.join(comics_dir, comic_name)
